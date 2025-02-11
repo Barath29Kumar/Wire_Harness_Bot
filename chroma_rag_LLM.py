@@ -5,6 +5,11 @@ import base64
 from io import BytesIO
 from PIL import Image
 import chromadb
+from chromadb.config import Settings
+
+chroma_client = chromadb.PersistentClient(path="./chroma_db", settings=Settings(allow_reset=True))
+chroma_client = chromadb.Client(Settings(allow_reset=True))
+
 from sentence_transformers import SentenceTransformer, CrossEncoder
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
