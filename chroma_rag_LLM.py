@@ -11,6 +11,7 @@ from chromadb.config import Settings
 chroma_client = chromadb.PersistentClient(path="./chroma_db", settings=Settings(allow_reset=True, chroma_db_impl="duckdb"))
 
 
+
 from sentence_transformers import SentenceTransformer, CrossEncoder
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
