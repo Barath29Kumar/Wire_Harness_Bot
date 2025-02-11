@@ -1,0 +1,6 @@
+chromadb
+sentence-transformers
+pandas
+scikit-learn
+Pillow
+streamlit
