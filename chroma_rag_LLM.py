@@ -7,8 +7,9 @@ from PIL import Image
 import chromadb
 from chromadb.config import Settings
 
-chroma_client = chromadb.PersistentClient(path="./chroma_db", settings=Settings(allow_reset=True))
-chroma_client = chromadb.Client(Settings(allow_reset=True))
+# Use DuckDB instead of SQLite
+chroma_client = chromadb.PersistentClient(path="./chroma_db", settings=Settings(allow_reset=True, chroma_db_impl="duckdb"))
+
 
 from sentence_transformers import SentenceTransformer, CrossEncoder
 import pandas as pd
