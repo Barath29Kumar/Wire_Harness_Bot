@@ -1,4 +1,6 @@
-chromadb[duckdb]
+chromadb
+duckdb
+pysqlite3-binary
 sentence-transformers
 pandas
 scikit-learn
